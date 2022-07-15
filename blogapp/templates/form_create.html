@@ -1,0 +1,20 @@
+<h1>Django form을 이용한 새 글 작성 페이지</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <table>
+        {{ form.as_table }}
+      
+        <!-- views.py에서 render()의 
+         세번째 인자로 넘겨준 데이터는 html내에서 이중 중괄호 안에 감싸진 채로 표현 가능
+    
+         데이터명.as_table -> html 내에서 table 형태인 것처럼 보여짐
+              데이터명.as_p -> html 내에서 p 태그 안의 형태인 것처럼 보여짐
+              데이터명.as_ul -> html 내에서 ul 태그 안의 형태인 것처럼 보여짐
+        -->   
+    </table>
+
+    
+    <input type="submit" value="글 생성하기">
+</form>
